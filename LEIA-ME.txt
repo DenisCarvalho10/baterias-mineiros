@@ -1,57 +1,107 @@
 ======================================================
   SITE — BATERIAS MINEIROS (Mineiros-GO)
+  Dominio: www.bateriasmineiros.com.br
 ======================================================
 
-Este é o site institucional da Baterias Mineiros, representante Moura,
-com foco em baterias para carros, motos, caminhões e máquinas agrícolas
-e serviço de delivery/plantão em Mineiros-GO e região.
+Site institucional da Baterias Mineiros, representante Moura,
+com baterias para carros, motos, caminhoes e maquinas agricolas
+e servico de delivery/plantao em Mineiros-GO e regiao.
 
 --------------------------------------------------
 ESTRUTURA DOS ARQUIVOS
 --------------------------------------------------
-  index.html        -> a página do site
-  css/style.css     -> aparência (cores, layout)
-  js/script.js      -> menu, animações
+  index.html        -> a pagina do site
+  css/style.css     -> aparencia (cores, layout)
+  js/script.js      -> menu, animacoes
   assets/img/       -> logo e fotos da loja
+  robots.txt        -> SEO (buscadores)
+  sitemap.xml       -> SEO (mapa do site)
   LEIA-ME.txt       -> este arquivo
 
 --------------------------------------------------
-COMO VER O SITE NO COMPUTADOR
+VER O SITE NO COMPUTADOR
 --------------------------------------------------
-  Basta dar dois cliques no arquivo "index.html".
-  Ele abre no navegador (Chrome, Edge, etc.).
+  De dois cliques no arquivo "index.html".
+
+======================================================
+  PUBLICAR: GITHUB + VERCEL + DOMINIO LOCALWEB
+======================================================
+
+O repositorio Git ja esta pronto (primeiro commit feito).
+
+PASSO 1 - ENVIAR PARA O GITHUB
+--------------------------------------------------
+  a) Crie um repositorio novo e VAZIO no seu GitHub
+     (ex: "baterias-mineiros"). NAO marque "Add README".
+  b) Abra o terminal NESTA pasta e rode (troque SEU-USUARIO):
+
+       git remote add origin https://github.com/SEU-USUARIO/baterias-mineiros.git
+       git push -u origin main
+
+PASSO 2 - PUBLICAR NA VERCEL
+--------------------------------------------------
+  a) Entre em https://vercel.com com sua conta (login pelo GitHub).
+  b) "Add New..." > "Project" > importe o repositorio baterias-mineiros.
+  c) Framework Preset: "Other". Nao precisa configurar build
+     (e um site estatico). Clique em "Deploy".
+  d) A Vercel gera um endereco tipo baterias-mineiros.vercel.app.
+
+PASSO 3 - LIGAR O DOMINIO www.bateriasmineiros.com.br
+--------------------------------------------------
+  NA VERCEL:
+  a) No projeto > Settings > Domains.
+  b) Adicione:  bateriasmineiros.com.br
+     e tambem:  www.bateriasmineiros.com.br
+  c) A Vercel vai mostrar os registros de DNS que voce precisa criar.
+
+  NA LOCALWEB (painel do dominio > Zona DNS / DNS):
+  Configure conforme a Vercel pedir. O padrao costuma ser:
+
+    - Registro A     do dominio raiz (@ ou bateriasmineiros.com.br)
+      apontando para:   76.76.21.21
+
+    - Registro CNAME do "www"
+      apontando para:   cname.vercel-dns.com
+
+  IMPORTANTE:
+  - Use EXATAMENTE os valores que a Vercel exibir na sua tela
+    (eles tem prioridade sobre os exemplos acima).
+  - Se a Localweb ja tiver um registro A ou CNAME antigo do "www"
+    ou do dominio raiz, remova/edite para nao conflitar.
+  - A propagacao do DNS pode levar de alguns minutos ate 24-48h.
+  - Deixe "www" como principal na Vercel (o dominio informado foi o www).
+
+  O certificado HTTPS (cadeado) e emitido automaticamente pela Vercel.
 
 --------------------------------------------------
-COMO COLOCAR NO AR (HOSPEDAR) — GRÁTIS
+ATUALIZAR O SITE DEPOIS
 --------------------------------------------------
-  Opção fácil e gratuita:
-  1) Acesse https://app.netlify.com/drop
-  2) Arraste a PASTA INTEIRA "Baterias Mineiros" para a página.
-  3) Pronto: o site fica no ar com um link. Depois é só
-     apontar um domínio próprio (ex: bateriasmineiros.com.br), se quiser.
+  Edite os arquivos, salve e rode no terminal desta pasta:
 
-  Outras opções: Vercel, GitHub Pages, ou a hospedagem de sua preferência
-  (basta enviar todos os arquivos desta pasta para a raiz do servidor).
+       git add -A
+       git commit -m "descricao da alteracao"
+       git push
 
---------------------------------------------------
-DADOS USADOS NO SITE
---------------------------------------------------
-  WhatsApp: (64) 99991-0238
-  E-mail:   carlin86rx@gmail.com
-  Endereço: Avenida 03, Quadra 5, Lote 19, Parque São José
-            Mineiros-GO — CEP 75831-098
+  A Vercel publica a nova versao sozinha a cada push.
 
 --------------------------------------------------
-COMO ALTERAR INFORMAÇÕES
+DADOS DO SITE
 --------------------------------------------------
-  - Textos: abra o "index.html" em qualquer editor (ex: Bloco de Notas)
-    e altere o que precisar.
-  - Telefone WhatsApp: procure por "5564999910238" no index.html
-    (o número vem com 55 do Brasil + 64 do DDD, sem espaços).
-  - Fotos: substitua os arquivos dentro de assets/img/ mantendo os
-    mesmos nomes (logo.png, fachada.jpg, etc.).
+  WhatsApp:    (64) 99991-0238
+  E-mail:      carlin86rx@gmail.com
+  Endereco:    Avenida 03, Quadra 5, Lote 19, Parque Sao Jose
+               Mineiros-GO — CEP 75831-098
+  Atendimento: Segunda a domingo, plantao todos os dias (inclusive feriados)
 
-Cores da marca usadas:
+--------------------------------------------------
+ALTERAR INFORMACOES
+--------------------------------------------------
+  - Textos: abra o "index.html" em um editor (ex: Bloco de Notas).
+  - Telefone: procure por "5564999910238" no index.html
+    (55 do Brasil + 64 do DDD, sem espacos).
+  - Fotos: troque os arquivos em assets/img/ mantendo os mesmos nomes.
+
+Cores da marca:
   Amarelo  #FFD200
   Vermelho #E30613
   Grafite  #26241F
