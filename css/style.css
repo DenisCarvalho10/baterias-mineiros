@@ -32,7 +32,7 @@
 
 *{ margin:0; padding:0; box-sizing:border-box; }
 
-html{ scroll-behavior:smooth; }
+html{ scroll-behavior:smooth; overflow-x:clip; }
 
 body{
   font-family:var(--font-body);
@@ -40,7 +40,7 @@ body{
   background:var(--white);
   line-height:1.6;
   -webkit-font-smoothing:antialiased;
-  overflow-x:hidden;
+  overflow-x:clip;
 }
 
 img{ max-width:100%; display:block; }
@@ -498,6 +498,13 @@ a.info:hover{ background:rgba(255,210,0,.1); border-color:rgba(255,210,0,.4); tr
   100%{ opacity:0; }
 }
 
+/* Entrada do menu mobile (deslocamento pequeno e seguro: mesmo se a
+   animacao nao avancar em algum aparelho, o menu continua visivel na tela) */
+@keyframes navIn{
+  from{ transform:translateX(26px); opacity:.4; }
+  to{ transform:translateX(0); opacity:1; }
+}
+
 /* ============================================================
    REVEAL (animação ao rolar)
    ============================================================ */
@@ -525,13 +532,14 @@ a.info:hover{ background:rgba(255,210,0,.1); border-color:rgba(255,210,0,.4); tr
   .topbar__inner{ justify-content:center; }
 
   .nav{
+    display:none;
     position:fixed; top:0; right:0; height:100vh; width:min(82vw,320px);
+    max-width:100vw;
     background:#fff; flex-direction:column; align-items:stretch;
     padding:90px 22px 30px; gap:6px;
-    transform:translateX(100%); transition:transform .3s ease;
     box-shadow:var(--shadow-lg); z-index:99;
   }
-  .nav.is-open{ transform:translateX(0); }
+  .nav.is-open{ display:flex; animation:navIn .28s ease forwards; }
   .nav__link{ padding:14px 16px; font-size:1.05rem; border-bottom:1px solid var(--line); border-radius:0; }
   .nav__cta{ margin:16px 0 0; justify-content:center; }
   .nav__toggle{ display:flex; z-index:100; }
