@@ -1,0 +1,57 @@
+======================================================
+  SITE — BATERIAS MINEIROS (Mineiros-GO)
+======================================================
+
+Este é o site institucional da Baterias Mineiros, representante Moura,
+com foco em baterias para carros, motos, caminhões e máquinas agrícolas
+e serviço de delivery/plantão em Mineiros-GO e região.
+
+--------------------------------------------------
+ESTRUTURA DOS ARQUIVOS
+--------------------------------------------------
+  index.html        -> a página do site
+  css/style.css     -> aparência (cores, layout)
+  js/script.js      -> menu, animações
+  assets/img/       -> logo e fotos da loja
+  LEIA-ME.txt       -> este arquivo
+
+--------------------------------------------------
+COMO VER O SITE NO COMPUTADOR
+--------------------------------------------------
+  Basta dar dois cliques no arquivo "index.html".
+  Ele abre no navegador (Chrome, Edge, etc.).
+
+--------------------------------------------------
+COMO COLOCAR NO AR (HOSPEDAR) — GRÁTIS
+--------------------------------------------------
+  Opção fácil e gratuita:
+  1) Acesse https://app.netlify.com/drop
+  2) Arraste a PASTA INTEIRA "Baterias Mineiros" para a página.
+  3) Pronto: o site fica no ar com um link. Depois é só
+     apontar um domínio próprio (ex: bateriasmineiros.com.br), se quiser.
+
+  Outras opções: Vercel, GitHub Pages, ou a hospedagem de sua preferência
+  (basta enviar todos os arquivos desta pasta para a raiz do servidor).
+
+--------------------------------------------------
+DADOS USADOS NO SITE
+--------------------------------------------------
+  WhatsApp: (64) 99991-0238
+  E-mail:   carlin86rx@gmail.com
+  Endereço: Avenida 03, Quadra 5, Lote 19, Parque São José
+            Mineiros-GO — CEP 75831-098
+
+--------------------------------------------------
+COMO ALTERAR INFORMAÇÕES
+--------------------------------------------------
+  - Textos: abra o "index.html" em qualquer editor (ex: Bloco de Notas)
+    e altere o que precisar.
+  - Telefone WhatsApp: procure por "5564999910238" no index.html
+    (o número vem com 55 do Brasil + 64 do DDD, sem espaços).
+  - Fotos: substitua os arquivos dentro de assets/img/ mantendo os
+    mesmos nomes (logo.png, fachada.jpg, etc.).
+
+Cores da marca usadas:
+  Amarelo  #FFD200
+  Vermelho #E30613
+  Grafite  #26241F
