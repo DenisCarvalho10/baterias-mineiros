@@ -11,3 +11,15 @@ Desktop.ini
 # Dependências / build (não usados neste projeto, mas por segurança)
 node_modules/
 .vercel
+
+# Arquivos que NÃO fazem parte do site (não versionar / não publicar)
+# As imagens usadas no site ficam em assets/img/ e continuam versionadas.
+/Baterias Mineiros1.png
+/Baterias Mineiros3.png
+/Baterias Mineros2.png
+/Cartaz retrato azul elegante escritório advocacia (2).png
+/Cartaz retrato azul elegante escritório advocacia (3).png
+/ChatGPT Image*.png
+/IMG-20260710-*.jpg
+/catalogo-automotiva-convencional.pdf
+/Nova pasta/
